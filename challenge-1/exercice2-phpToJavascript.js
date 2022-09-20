@@ -8,6 +8,6 @@
  *****************************************************************************/
 
 function calculerSurface(rayon) {
-    return Math.PI * rayon * rayon;
+    return Math.PI * Math.sqrt(rayon);
 }
-console.log(calculerSurface(4));
+console.log(calculerSurface(1));
