@@ -53,7 +53,7 @@ const register = [
   },
 ];
 
-/**
+/** Consigne exercice
  * ### 1. Créez une fonction getSubtotal
  *
  * Cette fonction doit retourner un nombre contenant le prix total des commandes pour une seule table (sous-total).
@@ -76,8 +76,7 @@ const register = [
  * - Créez un mode “split the bill” en fonction du nombre de personnes à une table
  */
 
-// 1. Créez une fonction getSubtotal
-// Cette fonction doit retourner un nombre contenant le prix total des commandes pour une seule table (sous-total).
+//Créez une fonction getSubtotal
 const getSubtotal = (table) => {
   let subtotal = 0;
   for (let i = 0; i < table.orders.length; i++) {
@@ -86,15 +85,12 @@ const getSubtotal = (table) => {
   return subtotal;
 };
 
-// 2. Calculez les pourboires et la TVA
-// Créez une fonction calcPercentage retournant le produit du sous-total d’une table et d’un pourcentage. En Suisse, la TVA est de 7.6%, mais la fonction être suffisament générique pour traîter un % de pourboire arbitraire. Le montant doit être arrondi au 10ème.
+//Calculez les pourboires et la TVA
 const calcPercentage = (subtotal, percentage) => {
   return Math.round(subtotal * percentage * 10) / 10;
 };
 
-// 3. Créez une fonction qui génère une facture
-// Créez une fonction createBill retournant un objet avec les propriétés subtotal, tax et tip. Le total doit être arrondi au 10ème et sous forme de string préfixée de “CHF”.
-
+//Créez une fonction qui génère une facture
 const createBill = (table, tipPercentage) => {
   const subtotal = getSubtotal(table);
   const tip = calcPercentage(subtotal, tipPercentage);
@@ -108,7 +104,7 @@ const createBill = (table, tipPercentage) => {
   };
 };
 
-// 4. Générez les factures pour toutes les tables
+//Générez les factures pour toutes les tables
 for (let i = 0; i < register.length; i++) {
   const table = register[i];
   const bill = createBill(table);
@@ -126,9 +122,7 @@ for (let i = 0; i < register.length; i++) {
         <h2>Table ${table.tableID}</h2>
         <p>Sous total: CHF ${bill.subtotal}</p>
         <p>Tax: CHF ${bill.tax}</p>
-        <p class="tips">Pourboire: CHF ${bill.tip} soit ${Math.round(
-    tips * 100
-  )}%</p>
+        <p class="tips">Pourboire: CHF ${bill.tip} soit ${Math.round(tips * 100)}%</p>
         <input type="range" min="0" max="1" value="${tips}" step="0.01" class="tip">
         <br>
         <p class="total">Total: CHF ${bill.total}</p>
@@ -148,9 +142,7 @@ for (let i = 0; i < tipInputs.length; i++) {
     const table = register[i];
     const tips = e.target.value;
     const bill = createBill(table, tips);
-    tipsInputs[i].innerHTML = `Pourboire: CHF ${bill.tip} soit ${Math.round(
-      tips * 100
-    )}%`;
+    tipsInputs[i].innerHTML = `Pourboire: CHF ${bill.tip} soit ${Math.round(tips * 100)}%`;
     splitTotals[i].innerHTML = `Total: CHF ${bill.total}`;
   });
 }
