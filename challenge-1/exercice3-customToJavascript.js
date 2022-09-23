@@ -16,7 +16,6 @@ function insertionDansTableau(tableau, element) {
     tableau.sort();
 }
 
-// Tests
 const tableau = [];
 insertionDansTableau(tableau, 5);
 console.log(tableau);
