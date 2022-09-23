@@ -7,7 +7,7 @@ const register = [
       {
         item: "coffee",
         qty: 3,
-        price: 3.5,
+        price: 3.55,
       },
       {
         item: "salad",
@@ -53,7 +53,7 @@ const register = [
   },
 ];
 
-/**
+/** Consigne exercice
  * ### 1. Créez une fonction getSubtotal
  *
  * Cette fonction doit retourner un nombre contenant le prix total des commandes pour une seule table (sous-total).
@@ -76,8 +76,7 @@ const register = [
  * - Créez un mode “split the bill” en fonction du nombre de personnes à une table
  */
 
-// 1. Créez une fonction getSubtotal
-// Cette fonction doit retourner un nombre contenant le prix total des commandes pour une seule table (sous-total).
+//Créez une fonction getSubtotal
 const getSubtotal = (table) => {
   let subtotal = 0;
   for (let i = 0; i < table.orders.length; i++) {
@@ -86,15 +85,12 @@ const getSubtotal = (table) => {
   return subtotal;
 };
 
-// 2. Calculez les pourboires et la TVA
-// Créez une fonction calcPercentage retournant le produit du sous-total d’une table et d’un pourcentage. En Suisse, la TVA est de 7.6%, mais la fonction être suffisament générique pour traîter un % de pourboire arbitraire. Le montant doit être arrondi au 10ème.
+//Calculez les pourboires et la TVA
 const calcPercentage = (subtotal, percentage) => {
   return Math.round(subtotal * percentage * 10) / 10;
 };
 
-// 3. Créez une fonction qui génère une facture
-// Créez une fonction createBill retournant un objet avec les propriétés subtotal, tax et tip. Le total doit être arrondi au 10ème et sous forme de string préfixée de “CHF”.
-
+//Créez une fonction qui génère une facture
 const createBill = (table, tipPercentage) => {
   const subtotal = getSubtotal(table);
   const tip = calcPercentage(subtotal, tipPercentage);
@@ -104,11 +100,11 @@ const createBill = (table, tipPercentage) => {
     subtotal: subtotal,
     tip: tip,
     tax: tax,
-    total: `CHF ${total}`,
+    total: Math.round(total * 20) / 20,
   };
 };
 
-// 4. Générez les factures pour toutes les tables
+//Générez les factures pour toutes les tables
 for (let i = 0; i < register.length; i++) {
   const table = register[i];
   const bill = createBill(table);
@@ -124,29 +120,48 @@ for (let i = 0; i < register.length; i++) {
   billContainer.innerHTML += `
     <div class="bill">
         <h2>Table ${table.tableID}</h2>
-        <p>Subtotal: CHF ${bill.subtotal}</p>
+        <p>Sous total: CHF ${bill.subtotal}</p>
         <p>Tax: CHF ${bill.tax}</p>
-        <p>Pourboire: CHF ${bill.tip} soit ${Math.round(tips*100)}%</p>
-        <p>Total: ${bill.total}</p>
+        <p class="tips">Pourboire: CHF ${bill.tip} soit ${Math.round(tips * 100)}%</p>
         <input type="range" min="0" max="1" value="${tips}" step="0.01" class="tip">
+        <br>
+        <p class="total">Total: CHF ${bill.total}</p>
+        <label for="split">Nombre de personnes</label>
+        <input type="number" min="1" class="split">
+        <p class="split-total">Total par personne: CHF ${bill.total}</p>
     </div>
     `;
 }
 
 //update the bill when range input is changed
 const tipInputs = document.querySelectorAll(".tip");
+const tipsInputs = document.querySelectorAll(".tips");
+const splitTotals = document.querySelectorAll(".total");
 for (let i = 0; i < tipInputs.length; i++) {
-  const tipInput = tipInputs[i];
-  tipInput.addEventListener("change", function () {
-    const tip = tipInput.value;
+  tipInputs[i].addEventListener("input", (e) => {
     const table = register[i];
-    const bill = createBill(table, tip);
-    const billElement = tipInput.parentElement;
+    const tips = e.target.value;
+    const bill = createBill(table, tips);
+    tipsInputs[i].innerHTML = `Pourboire: CHF ${bill.tip} soit ${Math.round(tips * 100)}%`;
+    splitTotals[i].innerHTML = `Total: CHF ${bill.total}`;
+  });
+}
+
+//update the bill when split input is changed
+const splitInputs = document.querySelectorAll(".split");
+for (let i = 0; i < splitInputs.length; i++) {
+  const splitInput = splitInputs[i];
+  splitInput.addEventListener("input", (e) => {
+    let split = splitInput.value;
+    split < 1 ? (split = 1) : split;
+    const table = register[i];
+    const bill = createBill(table, 0.1);
+    const billElement = splitInput.parentElement;
     billElement.querySelector(
-      "p:nth-child(4)"
-    ).textContent = `Tip: CHF ${bill.tip} soit ${Math.round(tip * 100)}%`;
-    billElement.querySelector(
-      "p:nth-child(5)"
-    ).textContent = `Total: ${bill.total}`;
+      ".split-total"
+    ).textContent = `Total par personne: CHF ${
+      Math.round((bill.total / split) * 20) / 20
+    }`;
+    splitInput.value = split;
   });
 }
