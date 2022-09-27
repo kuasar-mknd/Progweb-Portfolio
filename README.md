@@ -28,7 +28,7 @@ https://simonpinkas.notion.site/
 [Resources à dispo](resources.md)
 
 ## Liste des challenges
-[Challenge 1](challenge-1/)
-[Challenge 2](challenge-2/)
-[Challenge 3](challenge-3/)
-[Challenge 4](challenge-4/)
+- [Challenge 1](https://kuasar-mknd.github.io/Progweb-Portfolio/challenge-1)
+- [Challenge 2](https://kuasar-mknd.github.io/Progweb-Portfolio/challenge-2)
+- [Challenge 3](https://kuasar-mknd.github.io/Progweb-Portfolio/challenge-3)
+- [Challenge 4](https://kuasar-mknd.github.io/Progweb-Portfolio/challenge-4)
