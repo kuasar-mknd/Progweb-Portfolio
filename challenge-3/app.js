@@ -94,7 +94,7 @@ const calcPercentage = (subtotal, percentage) => {
 const createBill = (table, tipPercentage) => {
   const subtotal = getSubtotal(table);
   const tip = calcPercentage(subtotal, tipPercentage);
-  const tax = calcPercentage(subtotal, 0.076);
+  const tax = calcPercentage(subtotal, 0.077);
   const total = subtotal + tip + tax;
   return {
     subtotal: subtotal,
