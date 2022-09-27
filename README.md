@@ -25,4 +25,4 @@ Comme vous le savez déjà, même pour les étudiant.e.s les plus motivé.e.s, c
 https://simonpinkas.notion.site/
 
 ### Resources
-[a relative link](resources.md)
+[Resources à dispo](resources.md)
