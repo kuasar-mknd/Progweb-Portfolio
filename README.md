@@ -1,4 +1,6 @@
-# progweb-portfolio
+# Portfolio porgweb
+Ce projet a été réalisé dans le cadre de l'HEIG-VD dans cursus COMEM 2022
+
 # 📜  Description
 
 Le Javascript est un des langages de programmation les plus utilisés au monde. Autrefois moquée, cette technologie est à présent le moteur qui fait rouler le web contemporain. La maitriser est donc une des compétences les plus recherchées sur le marché du travail et un pré-requis indispensable à la suite de vos études. 
