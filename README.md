@@ -23,3 +23,6 @@ L’examen final et l’évaluation intermédiaire comporteront des éléments t
 Comme vous le savez déjà, même pour les étudiant.e.s les plus motivé.e.s, certains sujets techniques sont de vrais murs de difficulté. Les abattre nécessite beaucoup de dévouement. Je serai donc généralement disponible pour répondre à vos questions hors des heures de cours. Je vous encourage néanmoins à faire preuve d’autonomie (lisez la documentation attentivement) et à vous entraider. Attention, entraide ne signifie pas plagiat. Les travaux pratiques doivent être les vôtres et les vôtres uniquement.
 
 https://simonpinkas.notion.site/
+
+### Resources
+[a relative link](resources.md)
