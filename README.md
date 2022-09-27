@@ -1,4 +1,4 @@
-# Portfolio porgweb
+# Portfolio progweb
 Ce projet a été réalisé dans le cadre de l'HEIG-VD dans cursus COMEM 2022
 
 # 📜  Description
