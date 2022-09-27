@@ -26,3 +26,9 @@ https://simonpinkas.notion.site/
 
 ### Resources
 [Resources à dispo](resources.md)
+
+## Liste des challenges
+[Challenge 1](challenge-1/)
+[Challenge 2](challenge-2/)
+[Challenge 3](challenge-3/)
+[Challenge 4](challenge-4/)
