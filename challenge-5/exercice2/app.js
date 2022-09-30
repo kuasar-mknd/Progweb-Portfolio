@@ -43,7 +43,7 @@ replaceMiddle[middle] = "radar";
 console.log(replaceMiddle);
 
 // 6. Retourner la concaténation de tous les mots
-const concat = strings.reduce((acc, string) => acc + string, ""); // acc = accumulator  // string = current value // "" = initial value of the accumulator (acc) // acc + string = the new value of the accumulator (acc)
+const concat = strings.reduce((acc, string) => acc + string, ""); 
 console.log(concat);
 
 // 7. Retourner le mot qui vient en premier selon l'ordre alphabétique ([localeCompare](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/localeCompare) peut être utile)

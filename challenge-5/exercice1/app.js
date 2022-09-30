@@ -58,6 +58,8 @@ const positive = numbers.every((number) => number > 0);
 console.log(positive);
 
 // 10. Retourner un tableau contenant les nombres pairs dans les premiers indices et les nombres impairs dans les indices restants
+const evenFirst = numbers.sort((a, b) => a % 2 - b % 2);
+console.log(evenFirst);
 
 // 11. Retourner un tableau ordonné du plus petit au plus grand nombre
 const ascending = numbers.sort((a, b) => a - b);
