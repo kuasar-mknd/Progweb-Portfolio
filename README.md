@@ -32,6 +32,7 @@ https://simonpinkas.notion.site/
 - [Challenge 2](https://kuasar-mknd.github.io/Progweb-Portfolio/challenge-2)
 - [Challenge 3](https://kuasar-mknd.github.io/Progweb-Portfolio/challenge-3)
 - [Challenge 4](https://kuasar-mknd.github.io/Progweb-Portfolio/challenge-4)
+- [Challenge 5](https://kuasar-mknd.github.io/Progweb-Portfolio/challenge-5)
 
 
 
