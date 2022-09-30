@@ -47,10 +47,14 @@ const concat = strings.reduce((acc, string) => acc + string, ""); // acc = accum
 console.log(concat);
 
 // 7. Retourner le mot qui vient en premier selon l'ordre alphabétique ([localeCompare](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/localeCompare) peut être utile)
-const first = strings.reduce((acc, string) => (acc.localeCompare(string) < 0 ? acc : string));
+const first = strings.reduce((acc, string) =>
+  acc.localeCompare(string) < 0 ? acc : string
+);
 console.log(first);
 
 // 8. Indiquer si les chaines du tableau forment un palindrome (si elle sont lues dans l'ordre des indices du tableau).
-const palindrome = strings.reduce((acc, string, index) => acc && string === strings[strings.length - index - 1], true); 
+const palindrome = strings.reduce(
+  (acc, string, index) => acc && string === strings[strings.length - index - 1],
+  true
+);
 console.log(palindrome);
-

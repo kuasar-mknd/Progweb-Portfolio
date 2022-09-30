@@ -28,9 +28,8 @@
 compteMoutons();
 
 function compteMoutons() {
-    console.log("1er Mouton");
-    for (let i = 2; i <= 23; i++) {
-        console.log(i + "e Mouton");
-    }
+  console.log("1er Mouton");
+  for (let i = 2; i <= 23; i++) {
+    console.log(i + "e Mouton");
+  }
 }
-

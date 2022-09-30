@@ -8,12 +8,11 @@
  * insertion de 1 => {1, 2, 5, 7}
  * insertion de 3 => {1, 2, 3, 4, 7}
  * ... et ainsi de suite
-*/
-
+ */
 
 function insertionDansTableau(tableau, element) {
-    tableau.push(element);
-    tableau.sort();
+  tableau.push(element);
+  tableau.sort();
 }
 
 // Tests

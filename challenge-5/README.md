@@ -1,4 +1,4 @@
-**Les exercices suivants sont proposés afin de vous familiariser avec les callbacks, les méthodes de tableau et le paradigme de [programmation fonctionnelle](https://fr.wikipedia.org/wiki/Programmation_fonctionnelle).** 
+**Les exercices suivants sont proposés afin de vous familiariser avec les callbacks, les méthodes de tableau et le paradigme de [programmation fonctionnelle](https://fr.wikipedia.org/wiki/Programmation_fonctionnelle).**
 
 ---
 
@@ -7,7 +7,7 @@
 A partir du tableau de nombres suivant:
 
 ```jsx
-const numbers = Object.freeze([3, 14, 15, 92 ,65, 35, 89, 79, 32, 38]);
+const numbers = Object.freeze([3, 14, 15, 92, 65, 35, 89, 79, 32, 38]);
 ```
 
 réalisez les fonctionnalités ci-dessous. La structure de données initiale ne doit pas être modifiée ( structure [immutable](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/freeze) ). *Vos solutions se doivent de rester fonctionnelles même si le tableau initial diffère.*
@@ -54,10 +54,10 @@ A partir du tableau représentant des cercles dans un plan suivant:
 
 ```jsx
 const circles = Object.freeze([
-  {x: 20, y: 10 , r: 10, color: "red"},
-  {x: 10, y: 10 , r: 20, color: "green"},
-  {x: 30, y: 25 , r: 15, color: "blue"},
-  {x: 10, y:5 , r: 5, color: "red"}
+  { x: 20, y: 10, r: 10, color: "red" },
+  { x: 10, y: 10, r: 20, color: "green" },
+  { x: 30, y: 25, r: 15, color: "blue" },
+  { x: 10, y: 5, r: 5, color: "red" },
 ]);
 circles.forEach(Object.freeze);
 ```

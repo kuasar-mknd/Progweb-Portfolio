@@ -20,10 +20,10 @@
  */
 
 const circles = Object.freeze([
-    { x: 20, y: 10, r: 10, color: "red" },
-    { x: 10, y: 10, r: 10, color: "green" },
-    { x: 30, y: 25, r: 15, color: "blue" },
-    { x: 10, y: 5, r: 5, color: "red" }
+  { x: 20, y: 10, r: 10, color: "red" },
+  { x: 10, y: 10, r: 10, color: "green" },
+  { x: 30, y: 25, r: 15, color: "blue" },
+  { x: 10, y: 5, r: 5, color: "red" },
 ]);
 circles.forEach(Object.freeze);
 
@@ -41,7 +41,7 @@ console.log(centers);
 
 // 4. Retourner tous les cercles en opérant une translation de 10 unités sur l'axe des abscisses
 const translatedCircles = circles.map((circle) => ({
-    ...circle,
-    x: circle.x + 10
+  ...circle,
+  x: circle.x + 10,
 }));
 console.log(translatedCircles);

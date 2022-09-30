@@ -101,15 +101,14 @@ console.log(alphabet);
 
 // Exercice 5
 function reduce(array, callback, initialValue) {
-    let result = initialValue;
-    array.forEach((element) => {
-        result = callback(result, element);
-    });
-    return result;
-    }
+  let result = initialValue;
+  array.forEach((element) => {
+    result = callback(result, element);
+  });
+  return result;
+}
 const nums = [4, 1, 3];
 const add = function (a, b) {
-    return a + b;
-    }
-console.log(reduce(nums, add, 0))
-
+  return a + b;
+};
+console.log(reduce(nums, add, 0));

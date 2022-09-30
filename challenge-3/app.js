@@ -122,7 +122,9 @@ for (let i = 0; i < register.length; i++) {
         <h2>Table ${table.tableID}</h2>
         <p>Sous total: CHF ${bill.subtotal}</p>
         <p>Tax: CHF ${bill.tax}</p>
-        <p class="tips">Pourboire: CHF ${bill.tip} soit ${Math.round(tips * 100)}%</p>
+        <p class="tips">Pourboire: CHF ${bill.tip} soit ${Math.round(
+    tips * 100
+  )}%</p>
         <input type="range" min="0" max="1" value="${tips}" step="0.01" class="tip">
         <br>
         <p class="total">Total: CHF ${bill.total}</p>
@@ -142,7 +144,9 @@ for (let i = 0; i < tipInputs.length; i++) {
     const table = register[i];
     const tips = e.target.value;
     const bill = createBill(table, tips);
-    tipsInputs[i].innerHTML = `Pourboire: CHF ${bill.tip} soit ${Math.round(tips * 100)}%`;
+    tipsInputs[i].innerHTML = `Pourboire: CHF ${bill.tip} soit ${Math.round(
+      tips * 100
+    )}%`;
     splitTotals[i].innerHTML = `Total: CHF ${bill.total}`;
   });
 }

@@ -177,7 +177,8 @@ for (let i = 0; i < albums.length; i++) {
   scores.push(albums[i].rymScore);
 }
 
-const averageScore = Math.round(scores.reduce((a, b) => a + b) / scores.length * 100) / 100;
+const averageScore =
+  Math.round((scores.reduce((a, b) => a + b) / scores.length) * 100) / 100;
 
 const averageScoreText = `La moyenne des notes des albums de Bruce Springsteen est de ${averageScore}.`;
 document.getElementById("averageNote").innerHTML = averageScoreText;

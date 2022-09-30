@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Challenge 1</title>
   </head>
   <body>
-       <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
 
-<!-- Load the element definition -->
-<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+    <!-- Load the element definition -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"
+    ></script>
 
-<!-- limit size -->
-<style>
-    zero-md {
+    <!-- limit size -->
+    <style>
+      zero-md {
         max-width: 800px;
         margin: 0 auto;
-    }
-</style>
+      }
+    </style>
 
-<!-- Simply set the `src` attribute to your MD file and win -->
-<zero-md src="README.md"></zero-md>
+    <!-- Simply set the `src` attribute to your MD file and win -->
+    <zero-md src="README.md"></zero-md>
     <h1>Challenge 1</h1>
     <p>Exercice 1 : convertir code Java en Javascript</p>
     <script src="exercice1-javaToJavascript.js"></script>
     <p>Exercice 2 : convertir code php en Javascript</p>
     <script src="exercice2-phpToJavascript.js"></script>
-    <p>Exercice 3 : convertir code personnel en Javascript : Ajouter des nombres dans un tableau et trier celui-ci</p>
+    <p>
+      Exercice 3 : convertir code personnel en Javascript : Ajouter des nombres
+      dans un tableau et trier celui-ci
+    </p>
     <script src="exercice3-customToJavascript.js"></script>
   </body>
 </html>
