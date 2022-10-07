@@ -20,6 +20,9 @@ const createPoll = (prompt) => {
     if (option > 0 && option <= options.length) {
       notes[option - 1]++;
     }
+    else{
+      console.error("Option invalide");
+    }
   };
 
   //function to display the poll
