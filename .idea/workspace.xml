@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="9afa0950-dfb3-49af-aadf-8dfddade4694" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/challenge-4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/challenge-4/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challenge-5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/challenge-5/index.html" afterDir="false" />
     </list>
+=======
+    <list default="true" id="eb27ac3b-202c-4c66-8fc7-c456de11810e" name="Changes" comment="" />
+>>>>>>> Challenge7
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -28,6 +33,12 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2F4kNAzUuc8RtMzEMvPZE2cmMXT" />
+=======
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Fo7bDErpO0pgYyQWErFxcoFdzn" />
+>>>>>>> Challenge7
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,15 +50,20 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
+<<<<<<< HEAD
     "last_opened_file_path": "C:/Users/samsa/SynologyDrive/Documents/HEIG/progWeb/progweb-portfolio",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
+=======
+    "last_opened_file_path": "C:/laragon/www",
+>>>>>>> Challenge7
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="9afa0950-dfb3-49af-aadf-8dfddade4694" name="Changes" comment="" />
       <created>1663758715263</created>
       <option name="number" value="Default" />
@@ -57,6 +73,15 @@
       <workItem from="1663914429712" duration="519000" />
       <workItem from="1663914997759" duration="10000" />
       <workItem from="1664540384991" duration="572000" />
+=======
+      <changelist id="eb27ac3b-202c-4c66-8fc7-c456de11810e" name="Changes" comment="" />
+      <created>1665146662248</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665146662248</updated>
+      <workItem from="1665146673299" duration="45000" />
+      <workItem from="1665146784048" duration="36000" />
+>>>>>>> Challenge7
     </task>
     <servers />
   </component>
