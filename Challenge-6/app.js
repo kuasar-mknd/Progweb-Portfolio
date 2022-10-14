@@ -1,3 +1,5 @@
+"use strict";
+
 const examplePrompt = {
   question: "What is your favorite programming language?",
   options: ["1. JavaScript", "2. PHP", "3. Java", "4. Assembly"],
@@ -16,8 +18,8 @@ const createPoll = (prompt) => {
 
   //function increment note for an option
   const incrementNote = (option) => {
-    //check if option is valid
-    if (option > 0 && option <= options.length) {
+    //check if option is valid and not a float
+    if (option > 0 && option <= options.length && Number.isInteger(option)) {
       notes[option - 1]++;
     }
     else{
@@ -76,6 +78,6 @@ poll2.incrementNote(2);
 poll2.incrementNote(2);
 poll2.incrementNote(2);
 poll2.incrementNote(2);
-poll2.incrementNote(2);
+poll2.incrementNote(2.5);
 poll2.displayPoll();
 poll2.displayWinner();
