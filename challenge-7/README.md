@@ -6,7 +6,7 @@
 
 La machine choisi un nombre aléatoire entre 1 et 20 (ou un autre nombre arbitraire). Une joueuse peut entrer un nombre dans l’élément `<input>`. Si le nombre entré est égal à celui “choisi” par la machine, la joueuse gagne et le nombre est dévoilé.
 
-Un indice affiche si le nombre est trop petit ou trop grand. 
+Un indice affiche si le nombre est trop petit ou trop grand.
 
 ### Interface
 
@@ -14,13 +14,13 @@ Un indice affiche si le nombre est trop petit ou trop grand.
 
 ![Screenshot 2022-10-12 at 13.51.19.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6074201f-0501-4c51-bb9f-f8d6ca28d768/Screenshot_2022-10-12_at_13.51.19.png)
 
-Le score est de 20 et on soustrait 1 à chaque réponse. Le high-score commence logiquement à 0. 
+Le score est de 20 et on soustrait 1 à chaque réponse. Le high-score commence logiquement à 0.
 
 **Click “Check!”: aucun nombre n’est entré**
 
 ![02.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4048720d-7d06-4bb6-8a17-08b73afa05e4/02.png)
 
-Lorsque aucun nombre (ou un nombre invalide) est entré, déduire un point et mettre un message d’erreur dans l’espace dédié aux indices. 
+Lorsque aucun nombre (ou un nombre invalide) est entré, déduire un point et mettre un message d’erreur dans l’espace dédié aux indices.
 
 **Click “Check!”: la réponse est fausse**
 
@@ -38,6 +38,6 @@ ou “too low”
 
 ### Reset
 
-Implémentez un reset du jeu lorsque le bouton “Again!” est cliqué. Tout doit être remis à zéro sauf le high score. 
+Implémentez un reset du jeu lorsque le bouton “Again!” est cliqué. Tout doit être remis à zéro sauf le high score.
 
 ![06.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f3b44880-6b92-4a62-8d96-28a1e8b28b50/06.png)

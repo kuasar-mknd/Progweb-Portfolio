@@ -21,8 +21,7 @@ const createPoll = (prompt) => {
     //check if option is valid and not a float
     if (option > 0 && option <= options.length && Number.isInteger(option)) {
       notes[option - 1]++;
-    }
-    else{
+    } else {
       console.error("Option invalide");
     }
   };

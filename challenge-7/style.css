@@ -74,7 +74,7 @@ h1 {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
-  transition: width cubic-bezier(0.39, 0.575, 0.565, 1) .5s;
+  transition: width cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s;
 }
 
 #answer.correct {
