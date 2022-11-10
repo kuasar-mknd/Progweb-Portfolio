@@ -1,0 +1,30 @@
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+svg {
+  width: 100%;
+  fill: rgba(0, 0, 0, 1);
+  pointer-events: none;
+}
