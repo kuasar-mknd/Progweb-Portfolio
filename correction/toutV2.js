@@ -193,7 +193,7 @@ monTableau.forEach(function(element) {
 let monTableau = ['un', 'deux', 'trois'];
 let monNouveauTableau = monTableau.map(function(element) {
     return element;
-}
+})
 console.log(monNouveauTableau); //Affiche les éléments du tableau
 
 //Une fonction est un bloc de code qui peut être appelé plusieurs fois, doc : https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Fonctions
@@ -359,7 +359,7 @@ const QuelquesChose = {
 
 //querySelectorAll permet de sélectionner plusieurs éléments, doc : https://developer.mozilla.org/fr/docs/Web/API/Document/querySelectorAll
 const plusieursElementsASelectionner = document.querySelectorAll(".nomDeLaClasse"); //Sélectionne tous les éléments ayant la classe 'nomDeLaClasse'
-const plusieursElementsASelectionner = document.querySelectorAll("#nomDeL'identifiant"); //Sélectionne tous les éléments ayant l'identifiant 'nomDeL'identifiant'
+const plusieursElementsASelectionner = document.querySelectorAll("#nomDeLidentifiant"); //Sélectionne tous les éléments ayant l'identifiant 'nomDeL'identifiant'
 
 //innerHTML permet de modifier le contenu d'un élément HTML (texte, balises, etc...), doc : https://developer.mozilla.org/fr/docs/Web/API/Element/innerHTML
 const unSeulElementASelectionner = document.querySelector(".nomDeLaClasse");
@@ -690,7 +690,7 @@ console.log(nbClasses); //Affiche le nombre de classes de l'élément ayant la c
 const unSeulElementASelectionner = document.querySelector(".nomDeLaClasse");
 unSeulElementASelectionner.classList.forEach((classe) => {
     console.log(classe); //Affiche toutes les classes de l'élément ayant la classe 'nomDeLaClasse'
-}
+})
 
 //classList.toString permet de récupérer toutes les classes d'un élément HTML
 const unSeulElementASelectionner = document.querySelector(".nomDeLaClasse");
@@ -773,7 +773,7 @@ const account1 = {
     owner: "Celeste Carter",
     username: "cc",
     movements: [200, -200, 340, -300, -20, 50, 400, -460],
-    pin: 0000
+    pin: 0o000
   };
   
   const accounts = [account1, account2, account3];
