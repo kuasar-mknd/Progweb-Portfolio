@@ -1,0 +1,104 @@
+:root {
+  --primary: rgb(240, 240, 240);
+  --primary-darker: rgb(100, 100, 100);
+  --green: rgb(188, 228, 193);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, Helvetica, sans-serif;
+  padding: 2rem;
+  color: var(--primary-darker);
+}
+
+[data-category="home"]::before {
+  content: "🏠";
+}
+
+[data-category="work"]::before {
+  content: "👷‍♀️";
+}
+
+[data-category="fun"]::before {
+  content: "🎉";
+}
+
+header {
+  margin: 0 0 1rem 0;
+}
+
+input {
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  color: var(--primary-darker);
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+input:focus {
+  outline: 2px solid var(--primary-darker);
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+}
+
+#category-container {
+  margin: 1rem 0 0 0;
+  display: flex;
+}
+
+.category {
+  background-color: var(--primary);
+  border-radius: 10px;
+  font-size: 2rem;
+  margin: 0 1rem 0 0;
+  padding: 0.66rem;
+}
+
+.category[data-selected="true"] {
+  background-color: var(--green);
+}
+
+.category:hover {
+  background-color: var(--green);
+}
+
+hr {
+  border: 1px solid var(--primary);
+}
+
+#list {
+  margin: 1rem 0 0 0;
+}
+
+#list > li[data-done="true"] {
+  background-color: rgb(188, 228, 193);
+}
+
+#list > li {
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.5rem;
+  height: 70px;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 0 1rem 0;
+  overflow: hidden;
+  padding: 1rem;
+  user-select: none;
+}
+
+#list > li::before {
+  font-size: 2rem;
+  margin: 0 1rem 0 0;
+}

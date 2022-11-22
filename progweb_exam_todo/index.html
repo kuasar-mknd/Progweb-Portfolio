@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ProgWeb Exam Todo</h1>
+      <input type="text" id="input-todo" />
+      <div id="category-container">
+        <div class="category" data-category="home" data-selected="true"></div>
+        <div class="category" data-category="work" data-selected="false"></div>
+        <div class="category" data-category="fun" data-selected="false"></div>
+      </div>
+    </header>
+    <hr />
+    <main>
+      <ul id="list">
+        <li data-category="home" data-done="true">
+          Wash all the pots and linens
+          <div class="button-done">❌</div>
+        </li>
+        <li data-category="work" data-done="false">
+          Defy all natural laws
+          <div class="button-done">❌</div>
+        </li>
+        <li data-category="fun" data-done="false">
+          Fall in an orchestra pit
+          <div class="button-done">❌</div>
+        </li>
+      </ul>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
