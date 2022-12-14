@@ -78,35 +78,28 @@ const getDashboardInformation = () => {
     getPosition().then((res) => {
         console.log(res);
         return res;
-    })
-        .then((res) => {
-            Promise.all([getWeather(res.lat, res.long), getStation(res.lat, res.long)])
-                .then((res) => {
-                    const weather = res[0];
-                    const station = res[1];
-                    renderWeather(weather.fcst_day_0.tmin, weather.fcst_day_0.tmax);
-                    return station;
-                })
-                .then((res) => {
-                    console.log(res);
-                    return getStationBoard(res.stations[1].id);
-                })
-                .then((res) => {
-                    return parseStationData(res);
-                })
-                .then((res) => {
-                    renderStationName(res.station);
-                    res.departures.forEach((el) => {
-                        renderTrain(el);
-                    });
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
-        })
-        .catch((err) => {
-            console.log(err);
+    }).then(async (res) => {
+        const weather = await getWeather(res.lat, res.long);
+
+        console.log(weather);
+        console.log(res);
+        return {weather, res};
+    }).then(async (res) => {
+        const station = getStation(res.res.lat, res.res.long);
+        console.log(station);
+        return {weather: res.weather, res: res.res, station};
+    }).then((res) => {
+        const stationBoard = getStationBoard(res.station.id);
+        console.log(stationBoard);
+        return {weather: res.weather, res: res.res, station: res.station, stationBoard};
+    }).then(async (res) => {
+        console.log(res);
+        renderWeather(res.weather.fcst_day_0.tmin, res.weather.fcst_day_0.tmax);
+        renderStationName(res.station.name);
+        res.stationBoard.stationboard.forEach((train) => {
+            renderTrain(train);
         });
+    });
 };
 
 getDashboardInformation();
@@ -118,12 +111,28 @@ const getWeather = async (lat, long) => {
 }
 
 const getStation = async (lat, long) => {
-    //fetcch only for train station
-    const response = await fetch(`https://transport.opendata.ch/v1/locations?type=station&x=${long}&y=${lat}`);
+    //fetch only station with only train
+    const response = await fetch(`https://transport.opendata.ch/v1/locations?x=${long}&y=${lat}&&limit=100`);
+    const data = await response.json();
+    //console.log(data);
+    //race to get the first stationboard with train
+    const stationConst = await Promise.race(data.stations.map(async (station) => {
+        const response = await fetch(`https://transport.opendata.ch/v1/stationboard?id=${station.id}&transportations[]=train&limit=100`);
+        const data = await response.json();
+        //console.log(data);
+        //check if there is a train
+        if (data.stationboard.length > 0) {
+            console.log(station);
+            return station;
+        }
+    return stationConst;
+    }));
+
+    //const response = await fetch(`https://transport.opendata.ch/v1/locations?type=station&x=${long}&y=${lat}`);
 
     //const response = await fetch(`https://transport.opendata.ch/v1/locations?x=${long}&y=${lat}&type=station`);
-    const data = await response.json();
-    return data;
+    //const data = await response.json();
+    //return data;
 }
 
 const getStationBoard = async (id) => {
